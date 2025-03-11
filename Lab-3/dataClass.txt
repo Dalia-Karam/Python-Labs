@@ -1,0 +1,23 @@
+dataclass: it is a decorator that simplifies the creation of classes by automatically generating special methods.
+without using dataclasses we will need to define the methods manually making the code more repetitive
+
+example:
+
+from dataclasses import dataclass
+
+@dataclass
+class Person:
+    name: str
+    age: int
+    city: str
+
+#create an instance
+p1 = Person("Dalia", 24, "Cairo")
+
+#accessing attributes and printing them
+print(p1.name)  
+print(p1.age)   
+print(p1.city)  
+
+#string representation (auto-generated __repr__ method)
+print(p1)  #output should be: Person(name='Dalia', age=24, city='Cairo')
